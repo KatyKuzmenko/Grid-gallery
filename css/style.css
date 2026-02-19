@@ -1,0 +1,79 @@
+@import url('./vars.css');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+  font-size: var(--main-font-size);
+  font-family: var(--main-font-family);
+  color: #000;
+}
+
+.container {
+  width: var(--container-width);
+  margin: 0 auto;
+}
+
+.main {
+  grid-area: main;
+}
+
+section {
+  padding-top: 120px;
+}
+
+.title {
+  font-family: 'Delius Unicase', cursive;
+  font-weight: 400;
+  font-style: normal;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.life {
+  grid-template-rows: repeat(4, minmax(370px, 1fr));
+}
+
+.people {
+  grid-template-rows: repeat(5, minmax(370px, 1fr));
+}
+
+.gal__item {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.gal__img {
+  height: 100%;
+}
+.gal__item_col-2 {
+  grid-column: span 2;
+}
+
+.gal__item_row-2 {
+  grid-row: span 2;
+}
+
+.gal__title {
+  position: absolute;
+  bottom: 7px;
+  left: 0;
+  width: 100%;
+  padding: 8px 10px;
+  display: flex;
+  justify-content: space-between;
+}
