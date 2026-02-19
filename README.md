@@ -1,1 +1,1 @@
-[DEMO] {https://katykuzmenko.github.io/Grid-gallery/}
+[DEMO](https://katykuzmenko.github.io/Grid-gallery/)
