@@ -69,11 +69,36 @@ section {
 }
 
 .gal__title {
+  display: flex;
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: 400;
+  color: #ffffff;
   position: absolute;
   bottom: 7px;
   left: 0;
   width: 100%;
   padding: 8px 10px;
-  display: flex;
   justify-content: space-between;
+}
+
+.gal__author {
+  font-weight: 500;
+}
+
+.gal__item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(36, 31, 36, 1) 0%,
+    rgba(187, 186, 192, 0.26) 10%,
+    rgba(187, 186, 192, 0.26) 44%,
+    rgba(91, 91, 91, 0.45) 75%
+  );
+}
+
+.gal__item:hover::before {
+  background: none;
 }
