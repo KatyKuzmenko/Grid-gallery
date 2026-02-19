@@ -97,6 +97,7 @@ section {
 
 .gal__item:hover .gal__icon:hover {
   opacity: 1;
+  cursor: pointer;
 }
 
 .gal__title {
