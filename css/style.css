@@ -4,6 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  transition: all 0.5s ease;
 }
 
 html,
@@ -36,18 +37,20 @@ section {
   margin-bottom: 80px;
 }
 
-.gallery {
+.gal,
+.gal-cities {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
-.life {
+.gal-life {
   grid-template-rows: repeat(4, minmax(370px, 1fr));
 }
 
-.people {
+.gal-people {
   grid-template-rows: repeat(5, minmax(370px, 1fr));
+  margin-bottom: 120px;
 }
 
 .gal__item {
@@ -55,17 +58,45 @@ section {
   overflow: hidden;
   height: 100%;
   border-radius: 20px;
+  transition: all 1s ease;
 }
 
 .gal__img {
   height: 100%;
+  object-fit: cover;
 }
+
 .gal__item_col-2 {
   grid-column: span 2;
 }
 
 .gal__item_row-2 {
   grid-row: span 2;
+}
+
+.gal__icons {
+  display: flex;
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  padding: 0 20px;
+  justify-content: space-between;
+}
+
+.gal__icon {
+  width: 40px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  opacity: 0;
+}
+
+.gal__item:hover .gal__icon {
+  opacity: 0.5;
+}
+
+.gal__item:hover .gal__icon:hover {
+  opacity: 1;
 }
 
 .gal__title {
@@ -100,5 +131,11 @@ section {
 }
 
 .gal__item:hover::before {
-  background: none;
+  background: linear-gradient(
+    to top,
+    rgba(36, 31, 36, 1) 0%,
+    rgba(187, 186, 192, 0) 25%,
+    rgba(187, 186, 192, 0) 44%,
+    rgba(91, 91, 91, 0) 75%
+  );
 }
